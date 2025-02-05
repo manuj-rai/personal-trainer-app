@@ -1,0 +1,49 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body.dark {
+    background-color: #111827;
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .feature-card {
+    @apply p-6 rounded-xl bg-dark text-center transition-all duration-300 hover:shadow-xl;
+    
+    .icon-container {
+      @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6;
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full;
+  }
+  
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition-property: transform, opacity;
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }

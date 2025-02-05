@@ -1,0 +1,44 @@
+<nav class="bg-secondary dark:bg-dark fixed w-full z-50 shadow-lg">
+    <div class="container mx-auto px-6 py-4">
+      <div class="flex items-center justify-between">
+        <a href="#" class="text-2xl font-bold text-primary">FITPRO</a>
+        
+        <div class="hidden md:flex space-x-8 items-center">
+          <a href="#features" class="text-gray-300 hover:text-primary transition-colors duration-300">Features</a>
+          <a href="#pricing" class="text-gray-300 hover:text-primary transition-colors duration-300">Pricing</a>
+          <a href="#contact" class="text-gray-300 hover:text-primary transition-colors duration-300">Contact</a>
+          <button 
+            (click)="darkMode.toggleDarkMode()" 
+            class="text-gray-300 hover:text-primary transition-colors duration-300"
+            aria-label="Toggle dark mode"
+          >
+            <span class="text-xl">{{ darkMode.isDarkMode ? '🌞' : '🌙' }}</span>
+          </button>
+        </div>
+  
+        <button 
+          class="md:hidden text-gray-300 focus:outline-none" 
+          (click)="isOpen = !isOpen"
+          aria-label="Toggle menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+          </svg>
+        </button>
+      </div>
+  
+      <div class="md:hidden mt-2" [class.hidden]="!isOpen">
+        <div class="px-2 pt-2 pb-3 space-y-1">
+          <a href="#features" class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-dark rounded">Features</a>
+          <a href="#pricing" class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-dark rounded">Pricing</a>
+          <a href="#contact" class="block px-3 py-2 text-gray-300 hover:text-primary hover:bg-dark rounded">Contact</a>
+          <button 
+            class="w-full text-left px-3 py-2 text-gray-300 hover:text-primary hover:bg-dark rounded"
+            (click)="darkMode.toggleDarkMode()"
+          >
+            Toggle Dark Mode
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
