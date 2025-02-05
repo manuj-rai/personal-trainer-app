@@ -8,10 +8,10 @@
         <div class="feature-card" *ngFor="let feature of features" data-aos="zoom-in">
           <div class="icon-container bg-primary">
             <ng-container [ngSwitch]="feature.icon">
-              <!-- <hero-icon *ngSwitchCase="'dumbbell'" name="academic-cap" class="h-8 w-8"></hero-icon>
-              <hero-icon *ngSwitchCase="'chart'" name="chart-bar" class="h-8 w-8"></hero-icon>
-              <hero-icon *ngSwitchCase="'heart'" name="heart" class="h-8 w-8"></hero-icon> -->
-            </ng-container> 
+              <i *ngSwitchCase="'dumbbell'" class="material-icons text-white h-8 w-8">fitness_center</i>
+              <i *ngSwitchCase="'chart'" class="material-icons text-white h-8 w-8">show_chart</i>
+              <i *ngSwitchCase="'heart'" class="material-icons text-white h-8 w-8">favorite</i>
+            </ng-container>
           </div>
           <h3 class="text-xl font-bold text-white mb-4">{{ feature.title }}</h3>
           <p class="text-gray-300">{{ feature.description }}</p>
