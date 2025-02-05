@@ -9,7 +9,7 @@ module.exports = {
       colors: {
         primary: '#dc2626',
         secondary: '#0a0a0a',
-        dark: '#171717',
+        dark: '#000',
       },
       animation: {
         'fade-in': 'fadeIn 0.9s ease-in-out',

@@ -14,7 +14,7 @@
   }
   
   .feature-card {
-    @apply p-6 rounded-xl bg-dark text-center transition-all duration-300 hover:shadow-xl;
+    @apply p-6 rounded-xl bg-gray-800 text-center transition-all duration-300 hover:shadow-xl;
     
     .icon-container {
       @apply w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6;
