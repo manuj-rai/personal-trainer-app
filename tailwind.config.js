@@ -12,7 +12,7 @@ module.exports = {
         dark: '#171717',
       },
       animation: {
-        'fade-in': 'fadeIn 0.5s ease-in',
+        'fade-in': 'fadeIn 0.9s ease-in-out',
       }
     },
   },

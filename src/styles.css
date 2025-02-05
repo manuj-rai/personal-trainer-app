@@ -2,10 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-body.dark {
-    background-color: #111827;
-}
-
 @keyframes fadeIn {
     from {
       opacity: 0;
