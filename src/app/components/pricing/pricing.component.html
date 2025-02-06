@@ -1,32 +1,47 @@
 <section id="pricing" class="py-20 px-6 dark:bg-dark">
-    <div class="container mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-aos="fade-up">
-        Pricing Plans
-      </h2>
-  
-      <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div 
-          *ngFor="let plan of plans" 
-          class="pricing-card bg-white dark:bg-gray-900 p-8 rounded-xl transform transition-all duration-300 hover:scale-105"
-          data-aos="fade-up"
+  <div class="container mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center text-primary mb-12" data-aos="fade-up">
+      Pricing Plans
+    </h2>
+
+    <div class="flex justify-center mb-8">
+      <label class="flex items-center space-x-2 text-white">
+        <span>Billing Cycle:</span>
+        <select [(ngModel)]="billingCycle" class="bg-gray-800 text-white p-2 rounded">
+          <option value="monthly">Monthly</option>
+          <option value="sixMonths">6 Months</option>
+          <option value="yearly">Yearly</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div 
+        *ngFor="let plan of plans" 
+        class="pricing-card bg-white dark:bg-gray-900 p-8 rounded-xl transform transition-all duration-300 hover:scale-105"
+        data-aos="fade-up"
+      >
+        <h3 class="text-2xl font-bold text-primary mb-4">{{ plan.name }}</h3>
+        <p class="text-4xl font-bold text-white mb-6">
+          ₹{{ getPlanPrice(plan) }} 
+          <span class="text-lg text-gray-300">
+            /{{ billingCycle === 'monthly' ? 'month' : billingCycle === 'sixMonths' ? '6 months' : 'year' }}
+          </span>
+        </p>
+        
+        <ul class="text-gray-300 space-y-3 mb-8">
+          <li *ngFor="let feature of plan.features" class="flex items-center">
+            <i class="material-icons text-primary mr-2">check_circle</i>
+            {{ feature }}
+          </li>            
+        </ul>
+        <button 
+          class="w-full bg-primary text-white py-3 rounded-lg hover:bg-red-600 transition-colors duration-300"
+          (click)="selectPlan(plan)"
         >
-          <h3 class="text-2xl font-bold text-primary mb-4">{{ plan.name }}</h3>
-          <p class="text-4xl font-bold text-white mb-6">
-            ${{ plan.price }}<span class="text-lg text-gray-300">/month</span>
-          </p>
-          <ul class="text-gray-300 space-y-3 mb-8">
-            <li *ngFor="let feature of plan.features" class="flex items-center">
-              <i class="material-icons text-primary mr-2">check_circle</i>
-              {{ feature }}
-            </li>            
-          </ul>
-          <button 
-            class="w-full bg-primary text-white py-3 rounded-lg hover:bg-red-600 transition-colors duration-300"
-            (click)="selectPlan(plan)"
-          >
-            Get Started
-          </button>
-        </div>
+          Get Started
+        </button>
       </div>
     </div>
-  </section>
+  </div>
+</section>
