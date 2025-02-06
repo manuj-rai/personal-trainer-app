@@ -5,7 +5,7 @@
       </h2>
   
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="feature-card" *ngFor="let feature of features" data-aos="zoom-in">
+        <div class="feature-card bg-white dark:bg-gray-900" *ngFor="let feature of features" data-aos="zoom-in">
           <div class="icon-container bg-primary">
             <ng-container [ngSwitch]="feature.icon">
               <i *ngSwitchCase="'dumbbell'" class="material-icons text-white h-8 w-8">fitness_center</i>
