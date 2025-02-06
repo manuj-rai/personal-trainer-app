@@ -1,0 +1,10 @@
+.py-20 {
+    max-width: 95%;
+    margin: auto;
+}
+
+@media (max-width:768px) {
+    .py-20 {
+        max-width: 100%;
+    }
+}
