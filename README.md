@@ -1,1 +1,1 @@
-[![Preview](public/images/project-10.png)](https://e-commerce-angular-tailwind.vercel.app/)
+[![Preview](public/images/project-10.png)](https://personal-trainer-app-three.vercel.app/)
