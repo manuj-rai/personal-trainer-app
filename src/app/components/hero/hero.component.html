@@ -1,16 +1,65 @@
-<section id="hero" class="pt-32 pb-20 px-6 dark:bg-dark">
-    <div class="container mx-auto text-center" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold text-primary mb-6 leading-tight">
-        Transform Your Body in <span class="text-white">90 Days</span>
-      </h1>
-      <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-        Personalized training programs and nutrition plans tailored to your unique goals
-      </p>
+<section 
+  id="hero" 
+  class="relative pt-32 pb-24 px-6 text-center bg-gradient-to-b from-white to-gray-100 dark:from-dark dark:to-black"
+>
+  <div class="absolute inset-0 bg-black/40 dark:bg-black/60"></div>
+
+  <div class="container mx-auto relative z-10" data-aos="fade-up">
+    <h1 class="text-5xl md:text-7xl font-extrabold leading-tight text-gray-900 dark:text-white">
+      Transform Your Body in  
+      <span class="text-red-600 dark:text-red-500">90 Days</span>
+    </h1>
+
+    <p class="text-lg md:text-2xl text-gray-800 dark:text-gray-300 mt-6 mb-10 max-w-3xl mx-auto">
+      Personalized coaching, tailored workout plans, and expert nutrition guidance. Start your transformation today!
+    </p>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col md:flex-row justify-center gap-4">
       <button 
-        class="bg-primary text-white px-8 py-3 rounded-full hover:bg-red-600 transition-colors duration-300 text-lg"
+        class="bg-red-600 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg hover:bg-red-700 transition-all duration-300 transform hover:scale-105"
         (click)="scrollToContact()"
       >
-        Start Your Journey Today
+        Get Started
+      </button>
+      <button 
+        class="border border-gray-400 text-gray-900 dark:text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300 transform hover:scale-105"
+      >
+        Learn More
       </button>
     </div>
-  </section>
+
+    <!-- Achievements Section -->
+    <div class="mt-36 grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto text-gray-900 dark:text-gray-300">
+      <div class="flex flex-col items-center gap-8" data-aos="fade-up">
+        <i class="material-icons text-red-600 dark:text-red-500 text-4xl">verified</i>
+        <div>
+          <h3 class="text-2xl font-bold">K11 Certified Trainer</h3>
+          <p class="text-gray-700 dark:text-gray-400">Internationally recognized fitness certification.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="100">
+        <i class="material-icons text-red-600 dark:text-red-500 text-4xl">groups</i>
+        <div>
+          <h3 class="text-2xl font-bold">100+ Clients Transformed</h3>
+          <p class="text-gray-700 dark:text-gray-400">Successful transformations across all fitness levels.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="200">
+        <i class="material-icons text-red-600 dark:text-red-500 text-4xl">fitness_center</i>
+        <div>
+          <h3 class="text-2xl font-bold">5+ Years Experience</h3>
+          <p class="text-gray-700 dark:text-gray-400">Expert guidance in strength training and nutrition.</p>
+        </div>
+      </div>
+      <div class="flex flex-col items-center gap-4" data-aos="fade-up" data-aos-delay="300">
+        <i class="material-icons text-red-600 dark:text-red-500 text-4xl">star</i>
+        <div>
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white">Top Rated Trainer</h3>
+          <p class="text-gray-700 dark:text-gray-400">Consistently rated 5 stars by clients.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
